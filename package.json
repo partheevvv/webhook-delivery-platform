@@ -1,0 +1,15 @@
+{
+  "name": "webhook-platform",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "dev": "concurrently -n auth,ingest,worker,receiver -c blue,green,magenta,yellow \"npm run dev -w @app/auth-service\" \"npm run dev -w @app/ingest-service\" \"npm run dev -w @app/worker-service\" \"npm run dev -w @app/receiver-service\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}

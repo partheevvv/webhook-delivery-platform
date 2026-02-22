@@ -1,0 +1,9 @@
+{
+  "name": "@app/shared",
+  "private": true,
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
